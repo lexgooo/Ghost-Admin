@@ -15,7 +15,8 @@ import {isVersionMismatchError} from 'ghost-admin/services/ajax';
 import {inject as service} from '@ember/service';
 import {task, taskGroup, timeout} from 'ember-concurrency';
 
-const DEFAULT_TITLE = '(Untitled)';
+// const DEFAULT_TITLE = '(Untitled)';
+const DEFAULT_TITLE = '(无标题)';
 
 // time in ms to save after last content edit
 const AUTOSAVE_TIMEOUT = 3000;
@@ -43,19 +44,19 @@ const messageMap = {
     errors: {
         post: {
             published: {
-                published: 'Update failed',
-                draft: 'Saving failed',
-                scheduled: 'Scheduling failed'
+                published: '更新失败',
+                draft: '保存失败',
+                scheduled: '计划失败'
             },
             draft: {
-                published: 'Publish failed',
-                draft: 'Saving failed',
-                scheduled: 'Scheduling failed'
+                published: '发布失败',
+                draft: '保存失败',
+                scheduled: '计划失败'
             },
             scheduled: {
-                scheduled: 'Updated failed',
-                draft: 'Unscheduling failed',
-                published: 'Publish failed'
+                scheduled: '更新失败',
+                draft: '撤销失败',
+                published: '发布失败'
             }
 
         }
@@ -64,19 +65,19 @@ const messageMap = {
     success: {
         post: {
             published: {
-                published: 'Updated.',
-                draft: 'Saved.',
-                scheduled: 'Scheduled.'
+                published: '已发布。',
+                draft: '已保存。',
+                scheduled: '已计划。'
             },
             draft: {
-                published: 'Published!',
-                draft: 'Saved.',
-                scheduled: 'Scheduled.'
+                published: '已发布！',
+                draft: '已保存。',
+                scheduled: '已计划。'
             },
             scheduled: {
-                scheduled: 'Updated.',
-                draft: 'Unscheduled.',
-                published: 'Published!'
+                scheduled: '已更新。',
+                draft: '已撤销。',
+                published: '已发布！'
             }
         }
     }

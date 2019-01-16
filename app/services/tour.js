@@ -47,24 +47,24 @@ export default Service.extend(Evented, {
 
         this.throbbers = [{
             id: 'getting-started',
-            title: 'Getting started with Ghost',
-            message: `This is your admin area! You'll find all of your content, users and settings right here. You can come back any time by visiting <a href="${adminUrl}" target="_blank">${adminDisplayUrl}</a>`
+            title: 'Ghost入门',
+            message: `这是您的管理区域！ 您可以在此处找到所有内容，用户和设置。 您可以随时访问 <a href="${adminUrl}" target="_blank">${adminDisplayUrl}</a>`
         }, {
             id: 'using-the-editor',
-            title: 'Using the Ghost editor',
-            message: 'Ghost uses Markdown to allow you to write and format content quickly and easily. This toolbar also helps! Hit the <strong>?</strong> icon for more editor shortcuts.'
+            title: '使用Ghost编辑器',
+            message: 'Ghost使用Markdown允许您快速轻松地编写和格式化内容。 这个工具栏也有帮助！ 点击<strong>？</ strong>图标可获得更多编辑器快捷方式。'
         }, {
             id: 'static-post',
-            title: 'Turning posts into pages',
-            message: 'Static pages are permanent pieces of content which live outside of your usual stream of posts, for example an \'about\' or \'contact\' page.'
+            title: '将文章转换成页面',
+            message: '静态页面是永久性的内容，它们位于您常用的文章流之外，例如“关于”或“联系人”页面。'
         }, {
             id: 'featured-post',
-            title: 'Setting a featured post',
-            message: 'Depending on your theme, featured posts receive special styling to make them stand out as a particularly important or emphasised story.'
+            title: '设置精选文章',
+            message: '根据您的主题，精选文章会获得特殊的样式，使其成为一个特别重要或强调的故事。'
         }, {
             id: 'upload-a-theme',
-            title: 'Customising your publication',
-            message: 'Using custom themes, you can completely control the look and feel of your site to suit your branch. Here\'s a full guide to help: <strong><a href="https://themes.ghost.org" target="_blank">https://themes.ghost.org</a></strong>'
+            title: '自定义你发布的文章',
+            message: '使用自定义主题，您可以完全控制网站的外观，以适合您的分支。 这是一个完整的帮助指南： <strong><a href="https://themes.ghost.org" target="_blank">https://themes.ghost.org</a></strong>'
         }];
     },
 

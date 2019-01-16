@@ -1,5 +1,5 @@
 <header>
-    <h1>Create your account</h1>
+    <h1>创建你的账号</h1>
 </header>
 
 <form id="setup" class="gh-flow-create">
@@ -10,7 +10,7 @@
     {{gh-profile-image email=email setImage=(action "setImage")}}
 
     {{#gh-form-group errors=errors hasValidated=hasValidated property="blogTitle"}}
-        <label for="blog-title">Blog title</label>
+        <label for="blog-title">博客标题</label>
         <span class="gh-input-icon gh-icon-content">
             {{svg-jar "content"}}
             {{gh-trim-focus-input
@@ -18,7 +18,7 @@
                 type="text"
                 id="blog-title"
                 name="blog-title"
-                placeholder="Eg. The Daily Awesome"
+                placeholder="例如: The Daily Awesome"
                 autocorrect="off"
                 value=(readonly blogTitle)
                 input=(action (mut blogTitle) value="target.value")
@@ -29,14 +29,14 @@
     {{/gh-form-group}}
 
     {{#gh-form-group errors=errors hasValidated=hasValidated property="name"}}
-        <label for="name">Full name</label>
+        <label for="name">用户名</label>
         <span class="gh-input-icon gh-icon-user">
             {{svg-jar "user-circle"}}
             {{gh-text-input
                 tabindex="2"
                 id="name"
                 name="name"
-                placeholder="Eg. John H. Watson"
+                placeholder="例如: John H. Watson"
                 autocorrect="off"
                 value=(readonly name)
                 input=(action (mut name) value="target.value")
@@ -47,7 +47,7 @@
     {{/gh-form-group}}
 
     {{#gh-form-group errors=errors hasValidated=hasValidated property="email"}}
-        <label for="email">Email address</label>
+        <label for="email">邮箱地址</label>
         <span class="gh-input-icon gh-icon-mail">
             {{svg-jar "email"}}
             {{gh-text-input
@@ -55,7 +55,7 @@
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Eg. john@example.com"
+                placeholder="例如: john@example.com"
                 autocorrect="off"
                 value=(readonly email)
                 input=(action (mut email) value="target.value")
@@ -66,7 +66,7 @@
     {{/gh-form-group}}
 
     {{#gh-form-group errors=errors hasValidated=hasValidated property="password"}}
-        <label for="password">Password</label>
+        <label for="password">密码</label>
         <span class="gh-input-icon gh-icon-lock">
             {{svg-jar "lock"}}
             {{gh-text-input
@@ -74,7 +74,7 @@
                 type="password"
                 id="password"
                 name="password"
-                placeholder="At least 10 characters"
+                placeholder="至少10个字符"
                 autocorrect="off"
                 value=(readonly password)
                 input=(action (mut password) value="target.value")
@@ -94,7 +94,7 @@
         {{#if task.isRunning}}
             <span>{{svg-jar "spinner" class="gh-icon-spinner gh-btn-icon-no-margin"}}</span>
         {{else}}
-            <span>Last step: Invite your team {{svg-jar "arrow-right-small" class="gh-btn-icon-right"}}</span>
+            <span> 最后一步：邀请您的团队 {{svg-jar "arrow-right-small" class="gh-btn-icon-right"}}</span>
         {{/if}}
     {{/gh-task-button}}
 </form>

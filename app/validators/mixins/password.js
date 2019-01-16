@@ -65,7 +65,7 @@ export default Mixin.create({
 
         // password must be longer than 10 characters
         if (!validator.isLength(password || '', 10)) {
-            model.get('errors').add(errorTarget, 'Password must be at least 10 characters long');
+            model.get('errors').add(errorTarget, '密码长度必须至少为10个字符');
             return this.invalidate();
         }
 
@@ -74,40 +74,40 @@ export default Mixin.create({
         // dissallow password from badPasswords list (e. g. '1234567890')
         BAD_PASSWORDS.map((badPassword) => {
             if (badPassword === password) {
-                model.get('errors').add(errorTarget, 'Sorry, you cannot use an insecure password');
+                model.get('errors').add(errorTarget, '抱歉，您无法使用不安全的密码');
                 this.invalidate();
             }
         });
 
         // password must not match with users' email
         if (password.toLowerCase() === model.get('email').toLowerCase()) {
-            model.get('errors').add(errorTarget, 'Sorry, you cannot use an insecure password');
+            model.get('errors').add(errorTarget, '抱歉，您无法使用不安全的密码');
             this.invalidate();
         }
 
         // password must not contain the words 'ghost', 'password', or 'passw0rd'
         DISALLOWED_PASSWORDS.map((disallowedPassword) => {
             if (password.toLowerCase().indexOf(disallowedPassword) >= 0) {
-                model.get('errors').add(errorTarget, 'Sorry, you cannot use an insecure password');
+                model.get('errors').add(errorTarget, '抱歉，您无法使用不安全的密码');
                 this.invalidate();
             }
         });
 
         // password must not match with blog title
         if (password.toLowerCase() === blogTitle) {
-            model.get('errors').add(errorTarget, 'Sorry, you cannot use an insecure password');
+            model.get('errors').add(errorTarget, ' 抱歉，您无法使用不安全的密码');
             this.invalidate();
         }
 
         // password must not match with blog URL (without protocol, with or without trailing slash)
         if (password.toLowerCase() === blogUrl || password.toLowerCase() === blogUrlWithSlash) {
-            model.get('errors').add(errorTarget, 'Sorry, you cannot use an insecure password');
+            model.get('errors').add(errorTarget, ' 抱歉，您无法使用不安全的密码');
             this.invalidate();
         }
 
         // dissallow passwords where 50% or more of characters are the same
         if (!this._characterOccurance(password)) {
-            model.get('errors').add(errorTarget, 'Sorry, you cannot use an insecure password');
+            model.get('errors').add(errorTarget, ' 抱歉，您无法使用不安全的密码');
             this.invalidate();
         }
     }

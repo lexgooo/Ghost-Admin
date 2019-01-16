@@ -152,7 +152,7 @@ export default Controller.extend(ValidationEngine, {
                 this._handleSaveError(error);
             });
         }).catch(() => {
-            this.set('flowErrors', 'Please fill out the form to setup your blog.');
+            this.set('flowErrors', '请填写以上表单用以设置您的博客。');
         });
     },
 
@@ -169,7 +169,7 @@ export default Controller.extend(ValidationEngine, {
             this.set('flowErrors', error.payload.errors[0].message);
         } else {
             // Connection errors don't return proper status message, only req.body
-            this.get('notifications').showAlert('There was a problem on the server.', {type: 'error', key: 'setup.authenticate.failed'});
+            this.get('notifications').showAlert(' 服务器上出现问题。', {type: 'error', key: 'setup.authenticate.failed'});
         }
     },
 

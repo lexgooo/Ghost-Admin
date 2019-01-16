@@ -1,13 +1,13 @@
 <header>
-    <h1>Invite your team</h1>
-    <p>Ghost works best when shared with others. Collaborate, get feedback on your posts &amp; work together on ideas.</p>
+    <h1>邀请你的团队成员</h1>
+    <p>Ghost与他人共享时效果最佳。 协作，获得有关您的文章和反馈的反馈; 共同努力。</p>
 </header>
 
 <div><img class="gh-flow-faces" src="assets/img/users.png" alt="" /></div>
 
 <form class="gh-flow-invite" {{action "invite" on="submit"}}>
     {{#gh-form-group errors=errors hasValidated=hasValidated property="users"}}
-        <label for="users">Enter one email address per line, we’ll handle the rest! {{svg-jar "email"}}</label>
+        <label for="users"> 每行输入一个电子邮件地址，剩下的事就交给我们！ {{svg-jar "email"}}</label>
         {{gh-textarea
             name="users"
             required="required"
@@ -36,5 +36,5 @@
 </form>
 
 <button class="gh-flow-skip" {{action "skipInvite"}}>
-    I'll do this later, take me to my site!
+    这些事我稍后再做，去我的网站！
 </button>
